@@ -10,6 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_04_15_142431) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "clinic_id"
+    t.integer "price"
+    t.datetime "date_time"
+    t.string "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clinics", force: :cascade do |t|
+    t.string "clinic_name"
+    t.string "doctor_name"
+    t.string "address"
+    t.string "postcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "postcode"
+    t.string "dob"
+    t.integer "bank_account"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

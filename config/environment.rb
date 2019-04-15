@@ -8,5 +8,6 @@ ActiveRecord::Base.establish_connection(
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
-require_all 'app'
+SINATRA_ACTIVESUPPORT_WARNING=false
 
+require_all 'app'
