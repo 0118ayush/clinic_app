@@ -20,17 +20,15 @@ class CLI
     dob = @prompt.ask("#{@user.name}, whats your date of birth?: ")
     @dob = User.find_or_create_by(dob: dob)
   end
-  #
-  #
-  #
-  #
-  # # display current artists they like
-  # def display_current_balance
-  #   puts "You currently like: "
-  #   @user.artists.each do |artist|
-  #     puts artist.name
-  #   end
-  # end
+
+  def add_postcode
+    postcode = @prompt.ask("#{@user.name}, whats your postcode?: ")
+    @dob = User.find_or_create_by(postcode: postcode)
+  end
+
+
+
+  
   #
   # # ask them if they want to add another one
   # def add_another_artist?
