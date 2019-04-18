@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 2019_04_15_142431) do
     t.integer "user_id"
     t.integer "clinic_id"
     t.integer "price"
-    t.datetime "date_time"
     t.string "reason"
+    t.string "day"
+    t.string "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_142431) do
     t.string "name"
     t.string "postcode"
     t.string "dob"
+    t.string "email_address"
     t.integer "bank_account"
     t.datetime "created_at"
     t.datetime "updated_at"

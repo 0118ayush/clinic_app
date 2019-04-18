@@ -6,3 +6,8 @@ task :console do
     Pry.start
 end
 
+desc "run the CLI"
+task :run do
+  cli = CLI.new
+  cli.run
+end
