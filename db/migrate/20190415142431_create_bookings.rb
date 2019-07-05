@@ -6,6 +6,8 @@ class CreateBookings < ActiveRecord::Migration[4.2]
       t.integer :clinic_id
       t.integer :price
       t.string :reason
+      t.string :day
+      t.string :time
       t.timestamps
     end
   end
